@@ -25,20 +25,23 @@ Arabic (RTL) language support planned for the future.
 - Elementor = homepage tab content ONLY, nowhere else
 - No Woodmart. No other page builders outside homepage.
 
-## Orchestrator Rule
-The orchestrator (a separate ChatGPT Project) controls task order.
-Codex sessions do not decide the next major phase independently.
+## Orchestrator Mode
+The Codex side chat acts as the orchestrator. The main chat acts as the worker.
 
-Every session must read:
-- BUILD_LOG.md
-- TASK_BOARD.md
-- DECISIONS.md
+**Side chat (orchestrator):**
+- Reads AGENTS.md, TASK_BOARD.md, BUILD_LOG.md, DECISIONS.md
+- Determines the next task based on phase gates and reference status
+- Writes the exact prompt for the main chat worker session
+- Reviews results when reported
+- Does NOT write production code
 
-Every session must update:
-- BUILD_LOG.md
-- TASK_BOARD.md
+**Main chat (worker):**
+- Executes the prompt given to it
+- Writes code, modifies files
+- Updates BUILD_LOG.md and TASK_BOARD.md
+- Does NOT decide the next major phase independently
 
-If a session needs to modify files outside its assigned scope, it must stop and report.
+If a worker session needs to modify files outside its assigned scope, it must stop and report.
 
 ## Reference System
 - `reference/fashionnova/_global/fashionnova.raw.css` — Fashion Nova's complete compiled stylesheet. Single source of truth for all design values.

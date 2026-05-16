@@ -78,7 +78,7 @@ Do not use DEBUG for visual issues. Do not use FIX for broken functionality.
 
 ---
 
-## Codex CLI Config
+## Codex Config
 
 ```toml
 # ~/.codex/config.toml
@@ -106,6 +106,48 @@ model_reasoning_effort = "high"
 ```
 
 Start with `plan` profile for PLAN/REVIEW sessions. Use `work` for REFERENCE/SPEC/BUILD/FIX/DEBUG.
+
+---
+
+## Orchestrator Model: Side Chat
+
+The Codex side chat is the orchestrator. The main chat is the worker.
+
+### How It Works
+
+```
+SIDE CHAT (right panel) = orchestrator
+    Reads AGENTS.md, TASK_BOARD.md, BUILD_LOG.md, DECISIONS.md
+    Sees the main chat context
+    Decides what to do next
+    Writes the exact prompt for the main chat
+    Reviews results
+    Does NOT modify files
+
+MAIN CHAT (left panel) = worker
+    Executes the prompt pasted from the side chat
+    Writes code, modifies files
+    Updates BUILD_LOG.md and TASK_BOARD.md
+```
+
+### The Loop
+
+1. Side chat → "Read TASK_BOARD.md and BUILD_LOG.md. What's the next task? Write the exact prompt."
+2. Side chat outputs the prompt
+3. You paste that prompt into the main chat
+4. Main chat executes, writes code
+5. You visually check the output (Chrome, 390px)
+6. You git commit and push
+7. Side chat → "Session done. Files changed: [list]. Visual check: pass/fail. What's next?"
+8. Repeat
+
+### When to Start Fresh
+
+When the main chat gets long or context degrades:
+- Start a new main chat in the same project
+- Open a new side chat
+- First message to side chat: "Read TASK_BOARD.md and BUILD_LOG.md. Where are we?"
+- Side chat picks up from the repo state, not from old chat history
 
 ---
 
@@ -210,30 +252,17 @@ Active sessions, file locks, current phase, next tasks, blocked tasks. The orche
 ### DEBUG_LOG.md
 Log every functional bug with symptoms, reproduction, and resolution.
 
-### Catchup Pattern
-When starting a session that depends on previous work:
-
-```
-Before starting, read:
-- BUILD_LOG.md (current status)
-- TASK_BOARD.md (active tasks and locks)
-- DECISIONS.md (prior choices)
-- [specific files this session depends on]
-
-Then proceed with the task.
-```
-
 ---
 
 ## When to Stay vs Start New Chat
 
-**Stay in same Codex chat when:**
+**Stay in same main chat when:**
 - Same component, same branch, same files, same objective
 - Tiny CSS/spacing/HTML adjustment
 - No new bug category
 - Codex has edited fewer than 3 files
 
-**Start a new Codex chat when:**
+**Start a new main chat when:**
 - New component
 - New branch
 - PHP involved after CSS-only work
@@ -242,6 +271,8 @@ Then proceed with the task.
 - Bug affects more than one file
 - Codex has already edited 3+ files
 - Codex output starts contradicting itself
+
+Always open a fresh side chat with the new main chat.
 
 ---
 
@@ -314,31 +345,6 @@ DONE WHEN:
 
 ---
 
-## Orchestrator Model
-
-The orchestrator is a ChatGPT Project, not a Codex session.
-
-**Use the orchestrator for:**
-- Deciding next task
-- Writing exact Codex prompts
-- Reviewing session results
-- Deciding whether to continue, reset, review, or debug
-- Tracking active branches and file locks
-- Updating TASK_BOARD.md
-
-**Do not use the orchestrator for:**
-- Long debugging
-- Raw HTML/CSS dumps
-- Full code diffs
-- Deep bug investigation
-
-**When the orchestrator chat gets long, start a new one.**
-Name it `ORCH-02 Static Prototype Sprint` or `ORCH-03 WooCommerce Integration`.
-At the top: "Read TASK_BOARD.md, BUILD_LOG.md, DECISIONS.md, DEBUG_LOG.md."
-The new chat does not need the full old chat.
-
----
-
 ## Reference Status Tracking
 
 Once a component reference is complete and approved, freeze it:
@@ -362,7 +368,7 @@ Before merging integration work:
 - Never batch checkout + cart + account changes together
 
 Rollback:
-```bash
+```powershell
 git revert [commit]
 # clear WP Rocket cache on staging
 # retest staging
@@ -374,7 +380,7 @@ git revert [commit]
 
 **Start simple:**
 - Codex Desktop App
-- One session at a time
+- One main chat + one side chat at a time
 - Manual review after each session
 - Reference then Spec then Build then Check then Fix cycle
 
