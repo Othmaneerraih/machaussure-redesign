@@ -1,0 +1,14 @@
+wp-content/uploads/
+wp-content/cache/
+wp-content/plugins/
+wp-content/themes/*
+!wp-content/themes/machaussure-custom/
+*.sql
+*.zip
+*.log
+.env
+.DS_Store
+node_modules/
+vendor/
+.vscode/
+.idea/
