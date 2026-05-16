@@ -215,8 +215,8 @@ CONTEXT:
 - [Any specific files to read first]
 
 REFERENCE:
-- reference/fashionnova/[component]/dom.raw.html
-- reference/fashionnova/[component]/screenshot-mobile.png
+- reference/fashionnova/[category]/[component]/dom.raw.html
+- reference/fashionnova/[category]/[component]/screenshot-mobile.png
 - reference/fashionnova/_global/fashionnova.raw.css
 
 TASK:
@@ -413,3 +413,4 @@ git revert [commit]
 - [ ] Update BUILD_LOG.md
 - [ ] Update TASK_BOARD.md
 - [ ] Commit and push
+

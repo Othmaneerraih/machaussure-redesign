@@ -45,8 +45,8 @@ If a worker session needs to modify files outside its assigned scope, it must st
 
 ## Reference System
 - `reference/fashionnova/_global/fashionnova.raw.css` — Fashion Nova's complete compiled stylesheet. Single source of truth for all design values.
-- `reference/fashionnova/[component]/dom.raw.html` — rendered HTML per component
-- `reference/fashionnova/[component]/screenshot-mobile.png` — visual target
+- `reference/fashionnova/[category]/[component]/dom.raw.html` — rendered HTML per component
+- `reference/fashionnova/[category]/[component]/screenshot-mobile.png` — visual target
 - Font: Proxima Nova (full family, loaded locally as WOFF2) with Arabic-compatible fallback font
 
 Codex must read `fashionnova.raw.css` to decode all class names, CSS variables, typography classes, button variants, and breakpoints. Do not guess values — look them up in the reference CSS.
@@ -188,3 +188,4 @@ Before any task is done:
 - Running raw Fashion Nova HTML in production templates
 - Batching checkout/cart/account changes together
 - Using physical CSS directional properties (left/right/margin-left/padding-right) instead of logical properties
+

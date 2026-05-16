@@ -23,63 +23,108 @@ No phase advances unless its gate is passed.
 
 | Gate | Requirement | Status |
 |------|------------|--------|
-| 0 | Repo + control files pushed | ☐ |
-| 1 | Staging URL confirmed and accessible | ☐ |
-| 2 | Live site backed up (DB + files) | ☐ |
-| 3 | GeneratePress Free installed on staging | ☐ |
-| 4 | FiboSearch Pro + FiboFilters Pro installed | ☐ |
-| 5 | TI Wishlist installed | ☐ |
-| 6 | WP Rocket disabled on staging | ☐ |
-| 7 | Global Fashion Nova CSS saved to reference | ☐ |
-| 8 | Fonts converted to WOFF2 and committed | ☐ |
-| 9 | Product card reference frozen | ☐ |
-| 10 | Product card static prototype approved | ☐ |
-| 11 | Product card WooCommerce integration approved | ☐ |
-| 12 | Header + nav reference frozen | ☐ |
-| 13 | Header static prototype approved | ☐ |
-| 14 | Search overlay reference frozen | ☐ |
-| 15 | PLP + filters reference frozen | ☐ |
-| 16 | PDP reference frozen | ☐ |
-| 17 | Cart + checkout reference frozen | ☐ |
-| 18 | All static prototypes approved | ☐ |
-| 19 | All WooCommerce integrations on staging | ☐ |
-| 20 | Full purchase flow tested on staging | ☐ |
-| 21 | QA complete, ready for production | ☐ |
+| 0 | Repo + control files pushed | ☑ |
+| 1 | Global Fashion Nova CSS saved to reference | ☑ |
+| 2 | Fonts converted to WOFF2 and committed | ☑ |
+| 3 | Staging URL confirmed and accessible | ☐ |
+| 4 | Live site backed up (DB + files) | ☐ |
+| 5 | GeneratePress Free installed on staging | ☐ |
+| 6 | FiboSearch Pro + FiboFilters Pro installed | ☐ |
+| 7 | TI Wishlist installed | ☐ |
+| 8 | WP Rocket disabled on staging | ☐ |
+| 9 | All references extracted (32 HTML files) | ☐ |
+| 10 | Product card spec + prototype approved | ☐ |
+| 11 | Header spec + prototype approved | ☐ |
+| 12 | All static prototypes approved | ☐ |
+| 13 | All WooCommerce integrations on staging | ☐ |
+| 14 | Full purchase flow tested on staging | ☐ |
+| 15 | QA complete, ready for production | ☐ |
 
 ---
 
 ## Reference Status
 
-| # | Component | Raw Captured | Spec Created | Prototype Built | Visually Approved | Frozen |
-|---|-----------|-------------|-------------|----------------|------------------|--------|
-| 01 | Top header promo slider | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 02 | Main header bar | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 03 | Category navigation tabs | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 04 | Search overlay | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 05 | Account signup/login overlay | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 06 | Wishlist page | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 07 | Product archive page | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 08 | Category slider | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 09 | Sticky filter/search section | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 10 | Quick filter dropdowns | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 11 | Full filter overlay | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 12 | Product card | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 13 | Single product page | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 14 | Sticky add-to-cart bar | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 15 | Added-to-cart overlay | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 16 | Cart page | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 17 | Checkout page | ☐ | ☐ | ☐ | ☐ | ☐ |
-| 18 | Account page | ☐ | ☐ | ☐ | ☐ | ☐ |
+### Navigation
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Header (full: logo, icons, tabs, search bar) | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Banners
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Countdown banner | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Info slider | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Overlays
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Sign in | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Sign up | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Search (idle + typing + sub-components) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Menu (hamburger) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Reviews (full overlay) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Added to cart | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — Product Archive
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Full page | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Product card | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Category strip | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Sticky filter bar | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Filter overlay (open) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Filter overlay (selected) | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — Single Product
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Full page | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Gallery | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Info section (title, price, colors, sizes, add to bag) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Reviews section (inline) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Sticky add-to-cart bar | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Size guide overlay | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — Cart
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Full page (with items) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Empty cart | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — Wishlist
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Full page (with items) | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Empty wishlist | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — Checkout
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Full page | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+### Pages — My Account
+
+| Component | Raw Captured | Spec Created | Prototype Built | Approved | Frozen |
+|-----------|-------------|-------------|----------------|----------|--------|
+| Dashboard | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Orders list | ☐ | ☐ | ☐ | ☐ | ☐ |
 
 ---
 
 ## Next Tasks
 
-1. Create and push repo with control files
-2. Confirm staging URL
-3. Backup live site
-4. Save Fashion Nova global CSS to reference
-5. Begin reference extraction — product card first
+1. Confirm staging URL
+2. Backup live site
+3. Start reference extraction — product card first, then header, then search overlay
+4. Install GeneratePress Free on staging
 
 ## Blocked Tasks
 
