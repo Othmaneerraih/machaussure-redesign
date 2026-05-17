@@ -1,8 +1,8 @@
 # BUILD LOG
 
-## Current Phase: Setup
-## Last Session: REF-08 Forgot password manual DOM import and search manual review labels
-## Next Session: REF-09 Manual visual approval for clean shoes captures and manual DOM references
+## Current Phase: SPEC
+## Last Session: SPEC-01 Fashion Nova reference normalization and component specs
+## Next Session: SPEC-02 Product card and archive static prototype plan
 
 ---
 
@@ -24,6 +24,73 @@
 ---
 
 ## Log
+
+### 2026-05-17 - SPEC-01 - SPEC - Fashion Nova reference normalization and component specs
+- Branch: current workspace
+- Files changed:
+  - `docs/reference-index.md`
+  - `docs/design-tokens.md`
+  - `docs/component-specs/navigation-header.md`
+  - `docs/component-specs/notice-banners.md`
+  - `docs/component-specs/search-overlay.md`
+  - `docs/component-specs/account-overlays.md`
+  - `docs/component-specs/menu-overlay.md`
+  - `docs/component-specs/filter-overlay.md`
+  - `docs/component-specs/product-card.md`
+  - `docs/component-specs/product-archive-controls.md`
+  - `docs/component-specs/pdp-gallery.md`
+  - `docs/component-specs/pdp-info-section.md`
+  - `docs/component-specs/size-guide-overlay.md`
+  - `docs/component-specs/reviews.md`
+  - `docs/component-specs/added-to-cart-overlay.md`
+  - `docs/component-specs/cart-components.md`
+  - `docs/component-specs/wishlist-components.md`
+  - `docs/component-specs/checkout-components.md`
+  - `docs/component-specs/my-account-components.md`
+  - `docs/page-specs/product-archive.md`
+  - `docs/page-specs/single-product.md`
+  - `docs/page-specs/cart.md`
+  - `docs/page-specs/wishlist.md`
+  - `docs/page-specs/checkout.md`
+  - `docs/page-specs/my-account.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `Get-Content -Raw AGENTS.md`
+  - `Get-Content -Raw BUILD_LOG.md`
+  - `Get-Content -Raw TASK_BOARD.md`
+  - `Get-Content -Raw DECISIONS.md`
+  - `Get-Content -Raw tools/reference-extractor/manifest.json`
+  - `Get-Content -Raw reference/fashionnova/_review/review-report.md`
+  - `Get-Content -Raw reference/fashionnova/_manual/SOURCE_AUDIT.md`
+  - `rg --files reference/fashionnova`
+  - `rg -n "(--font|--color|--radius|--spacing|font-family|font-size|line-height|font-weight|border-radius|z-index|@media|390px|768px|1024px|1440px|#000|#fff|rgb|rem)" reference/fashionnova/_global/fashionnova.raw.css`
+  - `Get-Content reference/fashionnova/_global/fashionnova.raw.css | Select-Object -Skip ...`
+  - `node -e "...metadata summary..."`
+  - `node -e "...clean DOM text summary..."`
+  - `New-Item -ItemType Directory -Force docs/component-specs, docs/page-specs`
+  - `node -e "...component spec required heading check..."`
+  - `node -e "...page spec required heading check..."`
+  - `git status --short --untracked-files=all`
+  - `git diff --check -- BUILD_LOG.md TASK_BOARD.md`
+- Decisions made:
+  - Created a normalized reference index covering live extractor output, manual-only references, skipped live entries, priorities, paths, and risks.
+  - Translated Fashion Nova global CSS and captured metadata into MaChaussure design tokens without importing third-party CSS/classes.
+  - Created component specs for navigation, banners, search, account overlays, menu, filters, product cards, archive controls, PDP components, reviews, added-to-cart, cart, wishlist, checkout, and my account.
+  - Created page specs for product archive, single product, cart, wishlist, checkout, and my account.
+  - Explicitly labeled manual-only references as usable for visual/spec guidance only, not screenshot-backed, not live extractor output, and not to be copied into production.
+  - Kept checkout scoped as CSS-only restyle in specs.
+  - Created no production code and did not modify raw reference HTML.
+- Visual checks: not applicable
+- Bugs found:
+  - None.
+- Risks:
+  - Many live captures remain unreviewed; specs rely on captured/reference files but do not imply visual approval.
+  - Manual-only references remain not screenshot-backed and require careful prototype review.
+  - FiboSearch, FiboFilters, TI Wishlist, checkout, and account behavior must be verified on staging before integration.
+- Status: complete
+- Next:
+  - SPEC-02 Product card and archive static prototype plan.
 
 ### 2026-05-17 - REF-08 - REFERENCE FIX - Forgot password manual DOM import and search review labels
 - Branch: current workspace
