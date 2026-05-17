@@ -1,0 +1,21 @@
+# Manual reference source audit
+
+- `Manualdoms.txt` — imported search idle overlay DOM to `reference/fashionnova/_manual/overlays/search/dom-search-idle.mobile.manual.raw.html`
+- `Manualdoms.txt` — imported search typed/results overlay DOM to `reference/fashionnova/_manual/overlays/search/dom-search-results.mobile.manual.raw.html`
+- `Manualdoms.txt` — imported sign-in forgot password / password recovery overlay DOM to `reference/fashionnova/_manual/overlays/sign-in-forgot-password/dom-forgot-password.mobile.manual.raw.html`
+- `Manualdoms.txt` — imported wishlist full page with saved items DOM to `reference/fashionnova/_manual/pages/wishlist/full-page/dom-wishlist-full.mobile.manual.raw.html`
+- `Manualdoms.txt` — imported checkout full page DOM to `reference/fashionnova/_manual/pages/checkout/full-page/dom-checkout-full.mobile.manual.raw.html`
+- `Manualdoms.txt` — imported product archive category strip mobile DOM to `reference/fashionnova/_manual/pages/product-archive/category-strip/dom-category-strip.mobile.manual.raw.html`
+- Search idle manual reference is installed and represents overlay-before-typing state with division tabs, search header, recent searches, hot searches, and auto-suggest slider.
+- Search results manual reference is installed and represents overlay-after-typing state with typed query input, categories, popular results, pages, and product results.
+- Search manual references are manual DevTools DOM extractions only, not live extractor output, and not screenshot-backed; live search capture remains skipped unless a reliable public trigger is found.
+- Forgot password manual reference represents the password recovery state from the sign-in flow; it is not live extractor output and not screenshot-backed.
+- Wishlist full-page manual reference represents saved items; live wishlist-with-items capture remains blocked because public saved-item state did not persist without login.
+- Checkout full-page manual reference represents checkout page state; live checkout capture remains blocked because safe public checkout did not render.
+- Category strip manual reference represents intended mobile category strip state; live mobile capture remains blocked because it stayed condensed/glitched.
+- `Pasted text (3).txt` — imported to `reference/fashionnova/_manual/pages/product-archive/filter-selected/dom-filter-selected.mobile.manual.raw.html`
+- `Pasted text (4).txt` — imported to `reference/fashionnova/_manual/pages/my-account/dashboard/dom-dashboard.mobile.manual.raw.html`
+- `Pasted text (5).txt` — imported to `reference/fashionnova/_manual/pages/my-account/orders/dom-orders.mobile.manual.raw.html`
+- `Pasted text (6).txt` — imported to `reference/fashionnova/_manual/pages/my-account/my-info/dom-my-info.mobile.manual.raw.html`
+- `Pasted text.txt` — Not imported: file did not look like raw component DOM. It appears to contain conversation/log text rather than a stable single DOM capture.
+- `Pasted text (2).txt` — Not imported: file did not look like raw component DOM. It appears to contain conversation/log text rather than a stable single DOM capture.

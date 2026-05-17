@@ -1,0 +1,40 @@
+{
+  "id": "overlays-search-by-image",
+  "url": "https://www.fashionnova.com/",
+  "requestedUrl": "https://www.fashionnova.com/",
+  "selector": "[role=\"dialog\"]:has-text(\"SEARCH BY IMAGE\"):visible",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T14:42:44.878Z",
+  "actionsRun": [
+    {
+      "type": "click",
+      "selector": "[data-testid=\"search-bar-search-by-photo-button\"]:visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has-text(\"SEARCH BY IMAGE\"):visible",
+      "viewport": "mobile"
+    }
+  ],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/overlays/search-by-image/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/overlays/search-by-image/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/overlays/search-by-image/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 496.63,
+        "width": 375,
+        "height": 347.38
+      },
+      "outerHTMLLength": 39398
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "product-archive-full-page",
+  "url": "https://www.fashionnova.com/collections/shoes",
+  "requestedUrl": "https://www.fashionnova.com/collections/shoes",
+  "selector": null,
+  "captureMode": "fullPage",
+  "timestamp": "2026-05-17T14:44:09.585Z",
+  "actionsRun": [],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "rawDomPath": "reference/fashionnova/pages/product-archive/full-page/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/product-archive/full-page/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/product-archive/full-page/screenshot-mobile.png",
+      "boundingBox": null,
+      "outerHTMLLength": 3154208
+    },
+    {
+      "viewportLabel": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "rawDomPath": "reference/fashionnova/pages/product-archive/full-page/dom.desktop.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/product-archive/full-page/dom.desktop.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/product-archive/full-page/screenshot-desktop.png",
+      "boundingBox": null,
+      "outerHTMLLength": 2973260
+    }
+  ]
+}

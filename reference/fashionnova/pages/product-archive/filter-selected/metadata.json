@@ -1,0 +1,62 @@
+{
+  "id": "product-archive-filter-selected",
+  "url": "https://www.fashionnova.com/collections/shoes?size=6",
+  "requestedUrl": "https://www.fashionnova.com/collections/shoes",
+  "selector": "[role=\"dialog\"]:has([data-testid=\"clear-filters-button\"]):visible",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T15:39:01.606Z",
+  "actionsRun": [
+    {
+      "type": "click",
+      "selector": "[data-testid=\"mobile-filter-button\"]",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has([data-testid=\"collection-mobile-filter-aside-close-modal\"]):visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "click",
+      "selector": "xpath=//aside[@role=\"dialog\"]//button[@role=\"checkbox\" and normalize-space(.)=\"6\"]",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has([data-testid=\"clear-filters-button\"]):visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[aria-busy=\"true\"]",
+      "state": "hidden",
+      "timeout": 5000,
+      "viewport": "mobile"
+    },
+    {
+      "type": "wait",
+      "ms": 1000,
+      "viewport": "mobile"
+    }
+  ],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/collections/shoes?size=6",
+      "rawDomPath": "reference/fashionnova/pages/product-archive/filter-selected/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/product-archive/filter-selected/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/product-archive/filter-selected/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 844
+      },
+      "outerHTMLLength": 111301
+    }
+  ]
+}

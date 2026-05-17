@@ -1,0 +1,29 @@
+{
+  "id": "single-product-info-section",
+  "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+  "requestedUrl": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+  "selector": "xpath=//div[@data-testid=\"product-info-header\" and not(ancestor-or-self::*[contains(@class,\"lg:hidden\")])]/ancestor::div[contains(., \"Add to Bag\")][1]",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T14:46:07.576Z",
+  "actionsRun": [],
+  "captures": [
+    {
+      "viewportLabel": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "rawDomPath": "reference/fashionnova/pages/single-product/info-section/dom.desktop.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/single-product/info-section/dom.desktop.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/single-product/info-section/screenshot-desktop.png",
+      "boundingBox": {
+        "x": 890.5,
+        "y": 173,
+        "width": 393,
+        "height": 847.86
+      },
+      "outerHTMLLength": 89992
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "banners-info-slider",
+  "url": "https://www.fashionnova.com/",
+  "requestedUrl": "https://www.fashionnova.com/",
+  "selector": "main a[href*=\"/collections/one-day-deal\"]:has-text(\"TODAY ONLY\")",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T14:42:08.953Z",
+  "actionsRun": [],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/banners/info-slider/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/banners/info-slider/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/banners/info-slider/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 668.31,
+        "width": 375,
+        "height": 90
+      },
+      "outerHTMLLength": 3470
+    },
+    {
+      "viewportLabel": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/banners/info-slider/dom.desktop.raw.html",
+      "cleanedDomPath": "reference/fashionnova/banners/info-slider/dom.desktop.cleaned.html",
+      "screenshotPath": "reference/fashionnova/banners/info-slider/screenshot-desktop.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 702.08,
+        "width": 1425,
+        "height": 72
+      },
+      "outerHTMLLength": 3470
+    }
+  ]
+}

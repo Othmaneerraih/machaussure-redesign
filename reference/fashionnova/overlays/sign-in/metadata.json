@@ -1,0 +1,40 @@
+{
+  "id": "overlays-sign-in",
+  "url": "https://www.fashionnova.com/",
+  "requestedUrl": "https://www.fashionnova.com/",
+  "selector": "[role=\"dialog\"]:has([data-testid=\"auth-login-form\"]):visible",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T14:42:17.998Z",
+  "actionsRun": [
+    {
+      "type": "click",
+      "selector": "[data-testid=\"account-button-tooltip\"]:visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has([data-testid=\"auth-login-form\"]):visible",
+      "viewport": "mobile"
+    }
+  ],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/overlays/sign-in/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/overlays/sign-in/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/overlays/sign-in/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 494,
+        "width": 375,
+        "height": 350
+      },
+      "outerHTMLLength": 5027
+    }
+  ]
+}

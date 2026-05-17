@@ -1,0 +1,62 @@
+{
+  "id": "cart-full-page",
+  "url": "https://www.fashionnova.com/cart",
+  "requestedUrl": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+  "selector": null,
+  "captureMode": "fullPage",
+  "timestamp": "2026-05-17T15:39:19.981Z",
+  "actionsRun": [
+    {
+      "type": "click",
+      "selector": "xpath=(//div[@data-testid=\"product-size-options\" and contains(@class,\"max-w-[440px]\")]//button[normalize-space(.)=\"6\"])[1]",
+      "viewport": "mobile"
+    },
+    {
+      "type": "wait",
+      "ms": 500,
+      "viewport": "mobile"
+    },
+    {
+      "type": "click",
+      "selector": "[data-testid=\"add-to-bag-button\"]:visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+      "timeout": 15000,
+      "viewport": "mobile"
+    },
+    {
+      "type": "goto",
+      "url": "https://www.fashionnova.com/cart",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "body:has-text(\"MY BAG\"):has-text(\"(1 item)\")",
+      "timeout": 20000,
+      "viewport": "mobile"
+    },
+    {
+      "type": "wait",
+      "ms": 1000,
+      "viewport": "mobile"
+    }
+  ],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/cart",
+      "rawDomPath": "reference/fashionnova/pages/cart/full-page/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/cart/full-page/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/cart/full-page/screenshot-mobile.png",
+      "boundingBox": null,
+      "outerHTMLLength": 523771
+    }
+  ]
+}

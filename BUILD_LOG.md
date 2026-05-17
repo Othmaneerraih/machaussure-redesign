@@ -1,8 +1,8 @@
 # BUILD LOG
 
 ## Current Phase: Setup
-## Last Session: None
-## Next Session: ORCH-00 Project Setup
+## Last Session: REF-08 Forgot password manual DOM import and search manual review labels
+## Next Session: REF-09 Manual visual approval for clean shoes captures and manual DOM references
 
 ---
 
@@ -25,4 +25,398 @@
 
 ## Log
 
-(no sessions yet)
+### 2026-05-17 - REF-08 - REFERENCE FIX - Forgot password manual DOM import and search review labels
+- Branch: current workspace
+- Files changed:
+  - `reference/fashionnova/_manual/overlays/sign-in-forgot-password/dom-forgot-password.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/overlays/sign-in-forgot-password/dom-forgot-password.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/overlays/sign-in-forgot-password/notes.md`
+  - `reference/fashionnova/_manual/SOURCE_AUDIT.md`
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `tools/reference-extractor/review.mjs`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `npm --prefix tools/reference-extractor run review`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `git diff --check`
+- Decisions made:
+  - Imported user-provided `Manualdoms.txt` forgot-password/password-recovery overlay DOM into `_manual` only.
+  - Kept the forgot-password reference manual-only, not live extractor output, and not screenshot-backed.
+  - Updated review manual ID inference so search idle/results render as `overlays-search-idle` and `overlays-search-results` instead of duplicate `overlays-search` labels.
+  - Clarified that search idle covers division tabs, search header, recent searches, hot searches, and auto-suggest slider.
+  - Clarified that search results covers typed query input, categories, popular results, pages, and product results.
+  - Manual references are not live extractor output, not screenshot-backed, and no captures are approved automatically.
+- Visual checks: not applicable
+- Bugs found:
+  - Review labeling for manual search references was ambiguous because both files inherited the folder-level `overlays-search` id.
+- Risks:
+  - Manual DOM references have no screenshots and still require manual review before specs/prototypes.
+  - Live search capture remains skipped unless a reliable public trigger is found.
+- Status: complete
+- Next:
+  - Open `reference/fashionnova/_review/index.html` and manually approve, reject, or request recapture for the live screenshots and manual DOM references.
+
+### 2026-05-17 - REF-07 - REFERENCE FIX - Checkout and category strip manual DOM import
+- Branch: current workspace
+- Files changed:
+  - `reference/fashionnova/_manual/pages/checkout/full-page/dom-checkout-full.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/pages/checkout/full-page/dom-checkout-full.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/pages/checkout/full-page/notes.md`
+  - `reference/fashionnova/_manual/pages/product-archive/category-strip/dom-category-strip.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/pages/product-archive/category-strip/dom-category-strip.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/pages/product-archive/category-strip/notes.md`
+  - `reference/fashionnova/_manual/SOURCE_AUDIT.md`
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `npm --prefix tools/reference-extractor run review`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `git diff --check`
+- Decisions made:
+  - Imported user-provided `Manualdoms.txt` checkout full-page and product archive category strip mobile DOM into `_manual` only.
+  - Preserved raw manual DOM as supplied; cleaned DOM removes scripts/styles/noscript/template/comments/modulepreload links while preserving structural markup and attributes.
+  - Checkout full-page is tracked as a manual reference only; WooCommerce checkout implementation must preserve fields, hooks, nonces, payment methods, and validation.
+  - Category strip mobile is tracked as a manual reference only because the live mobile capture stayed condensed/glitched.
+  - Manual references are not live extractor output, not screenshot-backed, and no captures are approved automatically.
+- Visual checks: not applicable
+- Bugs found:
+  - None.
+- Risks:
+  - Manual DOM references have no screenshots and still require manual review before specs/prototypes.
+  - Live checkout and live category strip captures remain skipped for the documented public-capture blockers.
+- Status: complete
+- Next:
+  - Open `reference/fashionnova/_review/index.html` and manually approve, reject, or request recapture for the live screenshots and manual DOM references.
+
+### 2026-05-17 - REF-06 - REFERENCE FIX - Search and wishlist manual DOM import
+- Branch: current workspace
+- Files changed:
+  - `reference/fashionnova/_manual/overlays/search/dom-search-idle.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/overlays/search/dom-search-idle.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/overlays/search/dom-search-results.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/overlays/search/dom-search-results.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/overlays/search/notes.md`
+  - `reference/fashionnova/_manual/pages/wishlist/full-page/dom-wishlist-full.mobile.manual.raw.html`
+  - `reference/fashionnova/_manual/pages/wishlist/full-page/dom-wishlist-full.mobile.manual.cleaned.html`
+  - `reference/fashionnova/_manual/pages/wishlist/full-page/notes.md`
+  - `reference/fashionnova/_manual/SOURCE_AUDIT.md`
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `npm --prefix tools/reference-extractor run review`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `git diff --check`
+- Decisions made:
+  - Imported user-provided `Manualdoms.txt` search idle, search typed/results, and wishlist-with-items DOM into `_manual` only.
+  - Preserved raw manual DOM as supplied; cleaned DOM removes scripts/styles/noscript/template/comments/modulepreload links and normalizes `/en-sa` links to main-site equivalents.
+  - Search idle now covers division tabs, search header, recent searches, hot searches, and auto-suggest slider.
+  - Search typed/results now covers typed query input, categories, popular results, pages, and product results.
+  - Wishlist full page with saved items is installed as a manual DOM reference; live wishlist-with-items remains skipped because public saved-item state did not persist without login.
+  - Manual references are not live extractor output, not screenshot-backed, and no captures are approved automatically.
+- Visual checks: not applicable
+- Bugs found:
+  - None.
+- Risks:
+  - Manual DOM references have no screenshots and still require manual review before specs/prototypes.
+- Status: complete
+- Next:
+  - Open `reference/fashionnova/_review/index.html` and manually approve, reject, or request recapture for the live screenshots and manual DOM references.
+
+### 2026-05-17 - REF-00 - REFERENCE - Reference extractor product card pilot
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/package.json`
+  - `tools/reference-extractor/.gitignore`
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/manifest.json`
+  - `tools/reference-extractor/README.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools\reference-extractor\extract.mjs`
+- Decisions made:
+  - Added a local Playwright Chromium extractor because Codex Browser could discover the product-card selector but could not extract `outerHTML`.
+  - Made the extractor manifest-driven so future reference targets can be added without rewriting the script.
+  - Product card reference status stays uncaptured until the extractor is run and writes the DOM, screenshot, and metadata files.
+- Visual checks: not applicable
+- Bugs found: none
+- Risks:
+  - `npm install` and `npx playwright install chromium` still need to run locally before extraction.
+  - Fashion Nova transient modals may change; the extractor closes known non-destructive modal close buttons before capture.
+- Status: complete
+- Next:
+  - Run the extractor for `product-archive-product-card`.
+  - Verify `dom-product-card.raw.html`, `screenshot-card-mobile.png`, and `product-card.metadata.json`.
+
+### 2026-05-17 - REF-01 - REFERENCE - Generic Fashion Nova reference extractor
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/package.json`
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/manifest.json`
+  - `tools/reference-extractor/README.md`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.raw.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.cleaned.html`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-mobile.png`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-desktop.png`
+  - `reference/fashionnova/pages/product-archive/product-card.metadata.json`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools\reference-extractor\extract.mjs`
+  - `npm --prefix tools\reference-extractor run validate`
+  - `npm --prefix tools\reference-extractor run list`
+  - `npm --prefix tools\reference-extractor run extract -- --id product-archive-product-card`
+  - `npm --prefix tools\reference-extractor run extract`
+- Decisions made:
+  - Refactored the extractor to the new generic manifest schema with `viewports`, `target`, `captureMode`, `actions`, and explicit output paths.
+  - Added all final reference ids to `manifest.json`; only `product-archive-product-card` is runnable, all unknown targets are marked `needs-selector`.
+  - Raw and cleaned DOM are captured from the first requested viewport; screenshots are captured for every requested viewport; metadata records every viewport capture.
+- Visual checks: not applicable
+- Bugs found:
+  - Sandbox blocks Playwright Chromium launch; extraction succeeds when the Playwright command is allowed outside the sandbox.
+- Risks:
+  - Future selector entries need manual visual approval before they are marked ready.
+  - Fashion Nova modal behavior may require entry-specific actions if transient overlays change.
+- Status: complete
+- Next:
+  - Visually approve the product card screenshots.
+  - Discover and add selectors for `navigation-header`, then `overlays-search-idle`.
+
+### 2026-05-17 - FIX-01 - FIX - Reference extractor viewport-safe outputs
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/README.md`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.mobile.raw.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.mobile.cleaned.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.desktop.raw.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.desktop.cleaned.html`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-mobile.png`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-desktop.png`
+  - `reference/fashionnova/pages/product-archive/product-card.metadata.json`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools\reference-extractor\extract.mjs`
+  - `npm --prefix tools\reference-extractor run validate`
+  - `npm --prefix tools\reference-extractor run list`
+  - `npm --prefix tools\reference-extractor run extract -- --id product-archive-product-card`
+- Decisions made:
+  - DOM files are now written per viewport using `.mobile.` and `.desktop.` filename segments.
+  - Metadata now stores per-viewport DOM paths alongside screenshot path, bounding box, and `outerHTMLLength`.
+  - Older ambiguous DOM files from the prior run were left untouched, but the extractor no longer writes them.
+- Visual checks: not applicable
+- Bugs found:
+  - Multi-viewport DOM output was ambiguous because one raw/cleaned DOM pair represented only the first captured viewport.
+- Risks:
+  - Existing ambiguous DOM files should be ignored or removed manually after review if they are no longer wanted.
+- Status: complete
+- Next:
+  - Visually approve the viewport-safe product card outputs.
+  - Continue selector discovery for `navigation-header`.
+
+### 2026-05-17 - FIX-02 - FIX - Reference extractor metadata cleanup
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/README.md`
+  - `reference/fashionnova/pages/product-archive/product-card.metadata.json`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.mobile.raw.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.mobile.cleaned.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.desktop.raw.html`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.desktop.cleaned.html`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-mobile.png`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-desktop.png`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools\reference-extractor\extract.mjs`
+  - `npm --prefix tools\reference-extractor run validate`
+  - `npm --prefix tools\reference-extractor run extract -- --id product-archive-product-card`
+- Decisions made:
+  - Removed legacy top-level viewport fields from extractor metadata.
+  - Kept viewport-specific fields only inside `captures[]`.
+  - Added README metadata example showing the cleaned shape.
+- Visual checks: not applicable
+- Bugs found:
+  - Metadata duplicated first-viewport fields at top level after multi-viewport support was added.
+- Risks:
+  - None for production; reference tooling only.
+- Status: complete
+- Next:
+  - Visually approve product card references.
+  - Continue selector discovery for `navigation-header`.
+
+### 2026-05-17 - REF-02 - REFERENCE - Batch 1 public Fashion Nova reference extraction
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/manifest.json`
+  - `reference/fashionnova/navigation/header/*`
+  - `reference/fashionnova/banners/info-slider/*`
+  - `reference/fashionnova/overlays/sign-in/*`
+  - `reference/fashionnova/overlays/sign-up/*`
+  - `reference/fashionnova/overlays/search-by-image/*`
+  - `reference/fashionnova/overlays/menu/*`
+  - `reference/fashionnova/overlays/reviews/*`
+  - `reference/fashionnova/pages/product-archive/full-page/*`
+  - `reference/fashionnova/pages/product-archive/filter-open/*`
+  - `reference/fashionnova/pages/product-archive/filter-selected/*`
+  - `reference/fashionnova/pages/product-archive/dom-product-card.*.html`
+  - `reference/fashionnova/pages/product-archive/screenshot-card-*.png`
+  - `reference/fashionnova/pages/product-archive/product-card.metadata.json`
+  - `reference/fashionnova/pages/single-product/full-page/*`
+  - `reference/fashionnova/pages/single-product/gallery/*`
+  - `reference/fashionnova/pages/single-product/reviews-section/*`
+  - `reference/fashionnova/pages/single-product/sticky-bar/*`
+  - `reference/fashionnova/pages/single-product/size-guide/*`
+  - `reference/fashionnova/pages/cart/empty/*`
+  - `reference/fashionnova/pages/wishlist/empty/*`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools/reference-extractor/extract.mjs`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `npm --prefix tools/reference-extractor run extract`
+- Decisions made:
+  - Used browser automation to discover stable public selectors and actions for Batch 1.
+  - Hardened transient modal dismissal with Fashion Nova `close-modal` and location-modal continue selectors.
+  - Captured 18 ready public manifest entries; kept unavailable, ambiguous, login/cart/checkout, and too-small targets as `needs-selector`.
+  - Skipped countdown and sticky filter bar because their correct stable elements are 44px tall and fail the extractor's required `height > 50` validation.
+  - Skipped the single-product info section because the visible title/price/sizes and add-to-bag button do not share a small stable parent.
+- Visual checks: not applicable
+- Bugs found:
+  - Desktop search-by-image did not reliably open the `SEARCH BY IMAGE` dialog; mobile capture succeeded and the entry is mobile-only.
+- Risks:
+  - Generated screenshots still need human visual approval.
+  - Search idle/typing/hot/trending states may require a changed Fashion Nova public search experience or a different trigger URL.
+- Status: complete
+- Next:
+  - Visually approve generated Batch 1 screenshots and DOM boundaries.
+  - Revisit skipped selectors, starting with search overlay states and any acceptable treatment for 44px banner/filter components.
+
+### 2026-05-17 - REF-03 - REFERENCE REVIEW - Batch 1 visual approval index
+- Branch: current workspace
+- Files changed:
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `rg --files reference/fashionnova`
+  - `git status --short --untracked-files=all`
+  - `node -` (scan generated screenshots/metadata and write review artifacts)
+  - `node -` (validate local `href`/`src` targets in the review index)
+  - Browser smoke test attempted against local `file://` review index
+- Decisions made:
+  - Created a static local visual review index for all generated Batch 1 screenshots.
+  - Kept every captured item as unreviewed; no screenshot was marked approved automatically.
+  - Added skipped-entry reasons from the manifest/TASK_BOARD state so manual review can distinguish skipped items from missing captures.
+- Visual checks: static review index link validation passed; in-app Browser file URL smoke test was blocked by Browser Use URL policy; manual screenshot approval still pending
+- Bugs found: none
+- Risks:
+  - The status controls in `index.html` are local review placeholders and do not persist decisions back into project files.
+  - The in-app Browser could not open the local `file://` URL, so browser rendering was not verified in this session.
+  - Manual approval is still required before specs or static prototypes begin.
+- Status: complete
+- Next:
+  - Open `reference/fashionnova/_review/index.html` and mark each capture approved, rejected, or needs recapture during manual review.
+  - Update reference statuses after manual decisions are recorded.
+
+### 2026-05-17 - REF-04 - REFERENCE RESET - Clean main-site shoes extraction
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/manifest.json`
+  - `tools/reference-extractor/README.md`
+  - `reference/fashionnova/**` generated outputs reset, preserving `_global/fashionnova.raw.css`
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - Browser tooling against `https://www.fashionnova.com/`, `/collections/shoes`, and `/products/ayla-thong-kitten-mules-black`
+  - `node --check tools/reference-extractor/extract.mjs`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `npm --prefix tools/reference-extractor run extract`
+  - `rg -n "/en-sa|one-day-deal-8|night-lily" tools/reference-extractor/manifest.json tools/reference-extractor/README.md`
+  - `node -` review index generation and link validation
+- Decisions made:
+  - Deleted/reset old generated Fashion Nova component references and rebuilt from the main Fashion Nova site only.
+  - Canonical URLs are now homepage `https://www.fashionnova.com/`, archive `https://www.fashionnova.com/collections/shoes`, and PDP `https://www.fashionnova.com/products/ayla-thong-kitten-mules-black`.
+  - Added per-entry validation overrides while keeping the default `50px` minimum: `banners-countdown` and `product-archive-sticky-filter-bar` use `minHeight: 20`.
+  - Captured 21 public entries and regenerated the review index with 30 screenshot cards.
+  - Kept 11 entries skipped with explicit reasons: search idle/typing/hot/trending, added-to-cart, single-product sticky bar, cart with items, wishlist with items, checkout, account dashboard, account orders.
+- Visual checks: review index link validation passed; manual screenshot approval still pending
+- Bugs found:
+  - Sandbox blocks Playwright Chromium launch; extraction succeeded after approving the Playwright command outside the sandbox.
+  - The main-site public search bar did not expose stable idle/typing/hot/trending overlay states during discovery.
+- Risks:
+  - `single-product-info-section` is captured from desktop only because that is the smallest reliable public boundary that includes the add-to-bag area.
+  - No captures are approved automatically; specs/prototypes must wait for manual visual approval.
+- Status: complete
+- Next:
+  - Open `reference/fashionnova/_review/index.html` and visually approve or reject the clean shoes captures.
+  - Revisit skipped search states only if the public Fashion Nova search UI changes or a stable trigger is found.
+
+### 2026-05-17 - REF-05 - REFERENCE - Finish reference set after manual DOM install
+- Branch: current workspace
+- Files changed:
+  - `tools/reference-extractor/extract.mjs`
+  - `tools/reference-extractor/manifest.json`
+  - `tools/reference-extractor/package.json`
+  - `tools/reference-extractor/README.md`
+  - `tools/reference-extractor/review.mjs`
+  - `reference/fashionnova/_review/index.html`
+  - `reference/fashionnova/_review/review-report.md`
+  - `reference/fashionnova/overlays/added-to-cart/**`
+  - `reference/fashionnova/pages/cart/full-page/**`
+  - `reference/fashionnova/pages/product-archive/filter-selected/**`
+  - `BUILD_LOG.md`
+  - `TASK_BOARD.md`
+- Commands run:
+  - `node --check tools/reference-extractor/extract.mjs`
+  - `node --check tools/reference-extractor/review.mjs`
+  - `npm --prefix tools/reference-extractor run validate`
+  - `npm --prefix tools/reference-extractor run list`
+  - `npm --prefix tools/reference-extractor run extract -- --ids product-archive-category-strip,product-archive-filter-selected,overlays-added-to-cart,cart-full-page,checkout-full-page,wishlist-full-page`
+  - `npm --prefix tools/reference-extractor run review`
+  - `Select-String -Path reference/fashionnova/_review/review-report.md -Pattern ...`
+  - `Get-ChildItem -Recurse -File reference/fashionnova/_manual`
+- Decisions made:
+  - Verified the four installed manual reference groups: product archive filter-selected, my-account dashboard, my-account orders, and my-account my-info. Each has raw DOM, cleaned DOM, and `notes.md`, and is labeled manual reference / not live extractor output.
+  - Added a manifest-driven review generator that includes live extractor screenshots and manual DOM references, clearly labeling manual entries as `manual-reference`, `not-live-extractor-output`, and not screenshot-backed when no screenshot exists.
+  - Added extractor support for stable element bounding-box waits, image-load waits, and a `goto` action used for cart-state captures.
+  - Captured live `overlays-added-to-cart`, `cart-full-page` with one shoe item, and `product-archive-filter-selected`.
+  - Kept the manual filter-selected reference as a fallback in the review index/report.
+  - Tried product archive category strip with fresh page per viewport and stable waits, but the mobile screenshot still rendered condensed/glitched; removed the bad live output and marked the entry skipped with a precise reason.
+  - Kept checkout and wishlist-with-items skipped: checkout did not render after safe cart setup, and wishlist saved-item state did not persist without login. No checkout submit, payment data, login, CAPTCHA bypass, or order placement was attempted.
+  - Account dashboard, orders, and my-info remain manual-only references because live capture requires logged-in account state.
+  - Search live capture remains skipped because the public search UI still needs reliable live trigger discovery; manual search idle/results DOM was installed later in REF-06.
+- Visual checks:
+  - Added-to-cart drawer screenshot, cart-with-item screenshot, and filter-selected screenshot looked usable.
+  - Category strip mobile screenshot was visibly bad and was removed.
+  - Review report includes 30 live screenshot captures, 4 manual DOM references, and 11 skipped entries.
+- Bugs found:
+  - Playwright Chromium launch is blocked inside the sandbox (`spawn EPERM`); targeted extraction succeeded with approved out-of-sandbox execution.
+  - Fashion Nova exposes duplicate size buttons for mobile/desktop forms, so stateful add-to-cart actions needed a narrowed XPath locator.
+- Risks:
+  - Manual DOM references are not screenshot-backed unless separate screenshots are later installed.
+  - Category strip still needs a new capture strategy or manual reference.
+  - No captures are approved automatically; manual review remains required before specs/prototypes begin.
+- Status: complete
+- Next:
+  - Review `reference/fashionnova/_review/index.html`.
+  - Manual search and category strip DOM payloads were installed later in REF-06/REF-07; keep live captures blocked until reliable public triggers/capture strategies are found.

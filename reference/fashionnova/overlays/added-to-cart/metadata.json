@@ -1,0 +1,56 @@
+{
+  "id": "overlays-added-to-cart",
+  "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black?variant=39287141892220",
+  "requestedUrl": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+  "selector": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T15:38:47.981Z",
+  "actionsRun": [
+    {
+      "type": "click",
+      "selector": "xpath=(//div[@data-testid=\"product-size-options\" and contains(@class,\"max-w-[440px]\")]//button[normalize-space(.)=\"6\"])[1]",
+      "viewport": "mobile"
+    },
+    {
+      "type": "wait",
+      "ms": 500,
+      "viewport": "mobile"
+    },
+    {
+      "type": "click",
+      "selector": "[data-testid=\"add-to-bag-button\"]:visible",
+      "viewport": "mobile"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+      "timeout": 15000,
+      "viewport": "mobile"
+    },
+    {
+      "type": "wait",
+      "ms": 1000,
+      "viewport": "mobile"
+    }
+  ],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black?variant=39287141892220",
+      "rawDomPath": "reference/fashionnova/overlays/added-to-cart/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/overlays/added-to-cart/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/overlays/added-to-cart/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 48,
+        "width": 375,
+        "height": 796
+      },
+      "outerHTMLLength": 34555
+    }
+  ]
+}

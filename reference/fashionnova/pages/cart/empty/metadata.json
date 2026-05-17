@@ -1,0 +1,37 @@
+{
+  "id": "cart-empty",
+  "url": "https://www.fashionnova.com/cart",
+  "requestedUrl": "https://www.fashionnova.com/cart",
+  "selector": null,
+  "captureMode": "fullPage",
+  "timestamp": "2026-05-17T14:46:35.216Z",
+  "actionsRun": [],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/cart",
+      "rawDomPath": "reference/fashionnova/pages/cart/empty/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/cart/empty/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/cart/empty/screenshot-mobile.png",
+      "boundingBox": null,
+      "outerHTMLLength": 711966
+    },
+    {
+      "viewportLabel": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "https://www.fashionnova.com/cart",
+      "rawDomPath": "reference/fashionnova/pages/cart/empty/dom.desktop.raw.html",
+      "cleanedDomPath": "reference/fashionnova/pages/cart/empty/dom.desktop.cleaned.html",
+      "screenshotPath": "reference/fashionnova/pages/cart/empty/screenshot-desktop.png",
+      "boundingBox": null,
+      "outerHTMLLength": 597885
+    }
+  ]
+}

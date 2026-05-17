@@ -1,0 +1,17 @@
+{
+  "name": "machaussure-reference-extractor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Playwright extractor for Fashion Nova reference components.",
+  "scripts": {
+    "extract": "node extract.mjs",
+    "extract:product-card": "node extract.mjs --id product-archive-product-card",
+    "list": "node extract.mjs --list",
+    "review": "node review.mjs",
+    "validate": "node extract.mjs --validate"
+  },
+  "dependencies": {
+    "playwright": "latest"
+  }
+}

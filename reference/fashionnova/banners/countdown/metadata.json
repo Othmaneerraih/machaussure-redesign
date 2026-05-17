@@ -1,0 +1,47 @@
+{
+  "id": "banners-countdown",
+  "url": "https://www.fashionnova.com/",
+  "requestedUrl": "https://www.fashionnova.com/",
+  "selector": "[data-testid=\"countdown-timer\"]",
+  "captureMode": "element",
+  "timestamp": "2026-05-17T14:41:51.099Z",
+  "actionsRun": [],
+  "captures": [
+    {
+      "viewportLabel": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/banners/countdown/dom.mobile.raw.html",
+      "cleanedDomPath": "reference/fashionnova/banners/countdown/dom.mobile.cleaned.html",
+      "screenshotPath": "reference/fashionnova/banners/countdown/screenshot-mobile.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 59
+      },
+      "outerHTMLLength": 7205
+    },
+    {
+      "viewportLabel": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "https://www.fashionnova.com/",
+      "rawDomPath": "reference/fashionnova/banners/countdown/dom.desktop.raw.html",
+      "cleanedDomPath": "reference/fashionnova/banners/countdown/dom.desktop.cleaned.html",
+      "screenshotPath": "reference/fashionnova/banners/countdown/screenshot-desktop.png",
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 1425,
+        "height": 44
+      },
+      "outerHTMLLength": 7204
+    }
+  ]
+}

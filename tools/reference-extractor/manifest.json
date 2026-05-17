@@ -1,0 +1,791 @@
+{
+  "entries": [
+    {
+      "id": "navigation-header",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "[data-testid=\"header-container\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/navigation/header",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "banners-countdown",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "[data-testid=\"countdown-timer\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/banners/countdown",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "validation": {
+        "minHeight": 20
+      }
+    },
+    {
+      "id": "banners-info-slider",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "main a[href*=\"/collections/one-day-deal\"]:has-text(\"TODAY ONLY\")",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/banners/info-slider",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-sign-in",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has([data-testid=\"auth-login-form\"]):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"account-button-tooltip\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"auth-login-form\"]):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/sign-in",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-sign-up",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has([data-testid=\"auth-register-form\"]):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"account-button-tooltip\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"auth-login-form\"]):visible"
+        },
+        {
+          "type": "click",
+          "selector": "[data-testid=\"auth-register-button\"]"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"auth-register-form\"]):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/sign-up",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-search-idle",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "element",
+      "actions": [],
+      "outputFolder": "reference/fashionnova/overlays/search-idle",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Main-site search button/search-bar clicks did not open a stable idle overlay or visible search input during browser and Playwright discovery."
+    },
+    {
+      "id": "overlays-search-typing",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "element",
+      "actions": [],
+      "outputFolder": "reference/fashionnova/overlays/search-typing",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Typing state cannot be captured because the main-site search overlay/input did not activate reliably from the public homepage."
+    },
+    {
+      "id": "overlays-search-hot-searches",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "element",
+      "actions": [],
+      "outputFolder": "reference/fashionnova/overlays/search-hot-searches",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Hot searches were not exposed by the public main-site search UI during discovery."
+    },
+    {
+      "id": "overlays-search-trending-columns",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "element",
+      "actions": [],
+      "outputFolder": "reference/fashionnova/overlays/search-trending-columns",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Trending search columns were not exposed by the public main-site search UI during discovery."
+    },
+    {
+      "id": "overlays-search-by-image",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has-text(\"SEARCH BY IMAGE\"):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"search-bar-search-by-photo-button\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has-text(\"SEARCH BY IMAGE\"):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/search-by-image",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-menu",
+      "url": "https://www.fashionnova.com/",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has-text(\"NOVADEALS\"):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"menu-icon\"]:visible"
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/menu",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-reviews",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has([data-testid=\"reviews-body\"]):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "scroll",
+          "y": 1700
+        },
+        {
+          "type": "click",
+          "selector": "[data-testid=\"review-load-more--mobile\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"reviews-body\"]):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/reviews",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "overlays-added-to-cart",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "xpath=(//div[@data-testid=\"product-size-options\" and contains(@class,\"max-w-[440px]\")]//button[normalize-space(.)=\"6\"])[1]"
+        },
+        {
+          "type": "wait",
+          "ms": 500
+        },
+        {
+          "type": "click",
+          "selector": "[data-testid=\"add-to-bag-button\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+          "timeout": 15000
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ],
+      "outputFolder": "reference/fashionnova/overlays/added-to-cart",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "product-archive-full-page",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/product-archive/full-page",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "product-archive-product-card",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "[data-testid=\"grid-container\"] [data-testid=\"product-card\"]:has(a[data-testid=\"product-card-link-gid://shopify/Product/6542345470076\"])",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/product-archive",
+      "outputs": {
+        "rawDom": "dom-product-card.raw.html",
+        "cleanDom": "dom-product-card.cleaned.html",
+        "screenshotMobile": "screenshot-card-mobile.png",
+        "screenshotDesktop": "screenshot-card-desktop.png",
+        "metadata": "product-card.metadata.json"
+      }
+    },
+    {
+      "id": "product-archive-category-strip",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "[data-testid=\"fit-images-carousel\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/product-archive/category-strip",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Live mobile capture remains condensed/glitched after fresh browser context per viewport, viewport-before-navigation, stable bounding-box waits, and image-load waits; bad live output was removed instead of kept."
+    },
+    {
+      "id": "product-archive-sticky-filter-bar",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[data-testid=\"filters-bar-mobile\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/product-archive/sticky-filter-bar",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "actions": [
+        {
+          "type": "scroll",
+          "y": 700
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ],
+      "validation": {
+        "minHeight": 20
+      }
+    },
+    {
+      "id": "product-archive-filter-open",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has([data-testid=\"collection-mobile-filter-aside-close-modal\"]):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"mobile-filter-button\"]"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"collection-mobile-filter-aside-close-modal\"]):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/pages/product-archive/filter-open",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "product-archive-filter-selected",
+      "url": "https://www.fashionnova.com/collections/shoes",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has([data-testid=\"clear-filters-button\"]):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"mobile-filter-button\"]"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"collection-mobile-filter-aside-close-modal\"]):visible"
+        },
+        {
+          "type": "click",
+          "selector": "xpath=//aside[@role=\"dialog\"]//button[@role=\"checkbox\" and normalize-space(.)=\"6\"]"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has([data-testid=\"clear-filters-button\"]):visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[aria-busy=\"true\"]",
+          "state": "hidden",
+          "timeout": 5000
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ],
+      "outputFolder": "reference/fashionnova/pages/product-archive/filter-selected",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "single-product-full-page",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/single-product/full-page",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "single-product-gallery",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[data-testid=\"scroll-product-images-mobile\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/single-product/gallery",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "single-product-info-section",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "desktop"
+      ],
+      "target": "xpath=//div[@data-testid=\"product-info-header\" and not(ancestor-or-self::*[contains(@class,\"lg:hidden\")])]/ancestor::div[contains(., \"Add to Bag\")][1]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/single-product/info-section",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "single-product-reviews-section",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[data-testid=\"reviews-body-mobile\"]",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/single-product/reviews-section",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "single-product-sticky-bar",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "element",
+      "outputFolder": "reference/fashionnova/pages/single-product/sticky-bar",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "actions": [],
+      "status": "needs-selector",
+      "skipReason": "The canonical shoes PDP did not expose the previous [data-testid=\"add-to-bag-sticky\"] sticky bar during mobile discovery."
+    },
+    {
+      "id": "single-product-size-guide",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "[role=\"dialog\"]:has-text(\"SIZE GUIDE\"):visible",
+      "captureMode": "element",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-testid=\"product-size-chart\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has-text(\"SIZE GUIDE\"):visible"
+        }
+      ],
+      "outputFolder": "reference/fashionnova/pages/single-product/size-guide",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "cart-full-page",
+      "url": "https://www.fashionnova.com/products/ayla-thong-kitten-mules-black",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/cart/full-page",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "actions": [
+        {
+          "type": "click",
+          "selector": "xpath=(//div[@data-testid=\"product-size-options\" and contains(@class,\"max-w-[440px]\")]//button[normalize-space(.)=\"6\"])[1]"
+        },
+        {
+          "type": "wait",
+          "ms": 500
+        },
+        {
+          "type": "click",
+          "selector": "[data-testid=\"add-to-bag-button\"]:visible"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "[role=\"dialog\"]:has-text(\"ADDED TO BAG\"):visible",
+          "timeout": 15000
+        },
+        {
+          "type": "goto",
+          "url": "https://www.fashionnova.com/cart"
+        },
+        {
+          "type": "waitForSelector",
+          "selector": "body:has-text(\"MY BAG\"):has-text(\"(1 item)\")",
+          "timeout": 20000
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ]
+    },
+    {
+      "id": "cart-empty",
+      "url": "https://www.fashionnova.com/cart",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/cart/empty",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "wishlist-full-page",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/pages/wishlist",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/wishlist/full-page",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Saved-item wishlist was not accessible without login; clicking the public wishlist control did not persist an item on /pages/wishlist during discovery.",
+      "actions": []
+    },
+    {
+      "id": "wishlist-empty",
+      "url": "https://www.fashionnova.com/pages/wishlist",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/wishlist/empty",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      }
+    },
+    {
+      "id": "checkout-full-page",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/checkout",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/checkout/full-page",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Checkout page did not render during safe public discovery: after adding a shoe to cart, Proceed to Checkout did not navigate beyond /cart, and no checkout submission or payment data was attempted.",
+      "actions": []
+    },
+    {
+      "id": "my-account-dashboard",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/account",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/my-account/dashboard",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Manual reference installed under reference/fashionnova/_manual; live capture requires login and was not attempted.",
+      "actions": []
+    },
+    {
+      "id": "my-account-orders",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/account",
+      "viewports": [
+        "mobile",
+        "desktop"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/my-account/orders",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Manual reference installed under reference/fashionnova/_manual; live capture requires login and order history and was not attempted.",
+      "actions": []
+    },
+    {
+      "id": "my-account-my-info",
+      "status": "needs-selector",
+      "url": "https://www.fashionnova.com/account",
+      "viewports": [
+        "mobile"
+      ],
+      "target": "",
+      "captureMode": "fullPage",
+      "outputFolder": "reference/fashionnova/pages/my-account/my-info",
+      "outputs": {
+        "rawDom": "dom.raw.html",
+        "cleanDom": "dom.cleaned.html",
+        "screenshotMobile": "screenshot-mobile.png",
+        "screenshotDesktop": "screenshot-desktop.png",
+        "metadata": "metadata.json"
+      },
+      "skipReason": "Manual reference installed under reference/fashionnova/_manual; live capture requires login/account state and was not attempted.",
+      "actions": []
+    }
+  ]
+}
